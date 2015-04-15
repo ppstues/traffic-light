@@ -11,15 +11,22 @@ function stats = traffic_light(interval, total_steps, red_steps, green_steps, gr
 			cars += 1
 			cars_passed(end+1) = cars
 		end
-	end
-	
-	for j = 0:green_steps:interval
-		if randi([1, 10]) <= car_chance/10
-			cars += 1
-		end
 		
-		cars -= green_passing
-		cars_passed(end+1) = cars
+		for k = 0:red_steps:interval
+			if randi([1, 10]) <= car_chance/10
+				cars += 1
+				cars_passed(end+1) = cars
+			end
+		end
+	
+		for j = 0:green_steps:interval
+			if randi([1, 10]) <= car_chance/10
+				cars += 1
+			end
+			
+			cars -= green_passing
+			cars_passed(end+1) = cars
+		end
 	end
 	
 	stats = cars_passed
