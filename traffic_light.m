@@ -1,3 +1,7 @@
+%Stanislav Iliev
+%Kaloyan Nikov
+%Emiliyan Sokolov
+
 function stats = traffic_light(interval, total_steps, red_steps, green_steps, green_passing, car_chance)
 	cars = 0
 	cars_passed = []
