@@ -42,5 +42,3 @@ function rush = rush_hour_simulator (red_steps, green_steps, starting_traffic, c
 
 endfunction
 
-rush = rush_hour_simulator (5, 2, 11, 2);
-plot(rush)
