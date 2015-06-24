@@ -7,11 +7,6 @@ function stats = traffic_light(interval, total_steps, red_steps, green_steps, gr
 	cars_passed = []
 	
 	for i = 0:total_steps:(red_steps+green_steps)
-		if randi([1, 10]) <= car_chance/10
-			cars += 1
-			cars_passed(end+1) = cars
-		end
-		
 		for k = 0:red_steps:interval
 			if randi([1, 10]) <= car_chance/10
 				cars += 1
